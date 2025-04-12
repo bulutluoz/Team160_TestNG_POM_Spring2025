@@ -1,10 +1,15 @@
 package tests;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.TestOtomasyonuPage;
 import utilities.Driver;
+import utilities.ReusableMethods;
+
+import java.util.List;
 
 public class C06_PageClassKullanimi {
 
@@ -23,6 +28,8 @@ public class C06_PageClassKullanimi {
         Assert.assertTrue(actualAramaSonucSayisi > 3);
 
         //4- ilk urunu tiklayin
+        ReusableMethods.bekle(1);
+
         testOtomasyonuPage.bulunanUrunElementleriList.get(0).click();
 
         //5- acilan urun sayfasinda,
